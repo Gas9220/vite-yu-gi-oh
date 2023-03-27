@@ -15,6 +15,14 @@ export default {
     return {
       store
     }
+  },
+  created() {
+    // Test con un solo elemento
+      axios.get('https://db.ygoprodeck.com/api/v7/randomcard.php')
+        .then((response) => {
+          console.log(response.data);
+          this.store.cards.push(response.data)
+        })       
   }
 }
 </script>
