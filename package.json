@@ -9,8 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.2.47",
-    "sass": "^1.60.0"
+    "@popperjs/core": "^2.11.7",
+    "bootstrap": "^5.2.3",
+    "sass": "^1.60.0",
+    "vue": "^3.2.47"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
