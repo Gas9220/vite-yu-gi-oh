@@ -20,9 +20,12 @@ export default {
     <div class="container bg-white mt-5">
         <div class="row p-2">
             <div class="col-12">
-                <div class="p-2 bg-black text-white">Found 39 cards</div>
+                <div class="p-2 bg-black text-white">Found {{store.cards.length}} cards</div>
             </div>
-            <CardElement v-if="store.cards.length !== 0" :img="store.cards[0].card_images[0].image_url" :text1="store.cards[0].name" :text2="store.cards[0].race"></CardElement>
+            <CardElement v-for="card in store.cards" v-if="store.cards.length === 39" :img="card.card_images[0].image_url" :text1="card.name" :text2="card.race"></CardElement>
+            <div v-else class="col-12">
+                
+            </div>
         </div>
     </div>
 </template>

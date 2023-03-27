@@ -17,12 +17,14 @@ export default {
     }
   },
   created() {
-    // Test con un solo elemento
+    for (let index = 0; index < 39; index++) {
+      console.log("Eseguito")
       axios.get('https://db.ygoprodeck.com/api/v7/randomcard.php')
         .then((response) => {
           console.log(response.data);
           this.store.cards.push(response.data)
-        })       
+        })
+    }
   }
 }
 </script>
