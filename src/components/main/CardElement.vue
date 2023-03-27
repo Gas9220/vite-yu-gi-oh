@@ -5,10 +5,12 @@ export default {
 </script>
 
 <template>
-    <div class="card-element p-2">
-        <img src="/test-img.jpg" alt="card-img" class="w-100">
-        <h5 class="text-white">Alien Ammonite</h5>
-        <div>Alien</div>
+    <div class="col-lg-2 col-md-4 col-sm-6 mb-3">
+        <div class="card-element">
+            <img src="/test-img.jpg" alt="card-img" class="w-100">
+            <h5 class="text-white">Alien Ammonite</h5>
+            <div>Alien</div>
+        </div>
     </div>
 </template>
 
@@ -16,7 +18,6 @@ export default {
 @use '../../assets/scss/_partial/variables' as *;
 
 div.card-element {
-    width: 150px;
     background-color: $primary-color;
 }
 </style>

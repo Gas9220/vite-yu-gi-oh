@@ -10,11 +10,18 @@ export default {
 </script>
 
 <template>
-    <div class="container bg-white mt-3">
-        <div class="row">
-            <div class="col p-5">
-                <CardElement></CardElement>
+    <div class="container bg-white mt-5">
+        <div class="row p-2">
+            <div class="col-12">
+                <div class="p-2 bg-black text-white">Found 39 cards</div>
             </div>
+                <CardElement></CardElement>
+                <CardElement></CardElement>
+                <CardElement></CardElement>
+                <CardElement></CardElement>
+                <CardElement></CardElement>
+                <CardElement></CardElement>
+                <CardElement></CardElement>
         </div>
     </div>
 </template>
