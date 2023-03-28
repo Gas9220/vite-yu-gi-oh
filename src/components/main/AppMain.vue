@@ -20,10 +20,8 @@ export default {
     fetchInitialCards() {
       this.checkLoading()
       for (let index = 0; index < 20; index++) {
-        console.log("Eseguito")
         axios.get('https://db.ygoprodeck.com/api/v7/randomcard.php')
           .then((response) => {
-            console.log(response.data);
             this.store.cards.push(response.data)
           })
       }
@@ -38,7 +36,6 @@ export default {
         .then((response) => {
           this.checkLoading()
           this.store.cards = response.data.data;
-          this.store.cardsFounded = response.data.data.length;
         })
     },
     checkLoading() {
@@ -57,6 +54,11 @@ export default {
   },
   created() {
     this.fetchInitialCards()
+  },
+  computed: {
+    countCards() {
+        return this.store.cards.length;
+    }
   }
 }
 </script>
@@ -67,7 +69,7 @@ export default {
     <div class="container bg-white mt-3">
       <div class="row p-2">
         <div class="col-12">
-          <div class="p-2 bg-black text-white">Found {{ store.cards.length }} cards</div>
+          <div class="p-2 bg-black text-white">Found {{ countCards }} cards</div>
         </div>
         <CardElement v-for="card in store.cards" v-if="store.isLoading === false" :img="card.card_images[0].image_url"
           :text1="card.name" :text2="card.race"></CardElement>
