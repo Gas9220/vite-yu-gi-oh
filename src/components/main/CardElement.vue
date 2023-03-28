@@ -24,5 +24,6 @@ export default {
 
 div.card-element {
     background-color: $primary-color;
+    height: 100%;
 }
 </style>
