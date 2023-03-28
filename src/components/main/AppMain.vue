@@ -31,7 +31,8 @@ export default {
     fetchArchetype() {
       axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php', {
         params: {
-          archetype: store.selectedValue
+          archetype: store.selectedValue,
+          language: 'it'
         }
       })
         .then((response) => {
