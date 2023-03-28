@@ -1,7 +1,4 @@
 <script>
-import axios from 'axios';
-import { store } from './store';
-
 import AppHeader from './components/Header/AppHeader.vue';
 import AppMain from './components/main/AppMain.vue';
 
@@ -10,21 +7,6 @@ export default {
   components: {
     AppHeader,
     AppMain
-  },
-  data() {
-    return {
-      store
-    }
-  },
-  created() {
-    for (let index = 0; index < 39; index++) {
-      console.log("Eseguito")
-      axios.get('https://db.ygoprodeck.com/api/v7/randomcard.php')
-        .then((response) => {
-          console.log(response.data);
-          this.store.cards.push(response.data)
-        })
-    }
   }
 }
 </script>
