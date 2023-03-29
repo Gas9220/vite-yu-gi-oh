@@ -22,7 +22,7 @@ export default {
 <template>
     <div>
         <select class="form-select" v-model="store.selectedValue" @change="$emit('searchValue')">
-            <option selected>Select Archetype</option>
+            <option value="" selected>Select Archetype</option>
             <option v-for="archetype in archetypes" :value="archetype.archetype_name">{{ archetype.archetype_name }}
             </option>
         </select>
